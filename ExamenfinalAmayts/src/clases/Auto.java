@@ -22,6 +22,32 @@ public class Auto extends Vehiculo{
     public Auto(int placa, String marca, String modelo) {
         super(placa, marca, modelo);
     }
+
+    public int getAño() {
+        return año;
+    }
+
+    public void setAño(int año) {
+        this.año = año;
+    }
+
+    public double getPrecio_compra() {
+        return precio_compra;
+    }
+
+    public void setPrecio_compra(double precio_compra) {
+        this.precio_compra = precio_compra;
+    }
+
+    public double getPrecio_venta() {
+        return precio_venta;
+    }
+
+    public void setPrecio_venta(double precio_venta) {
+        this.precio_venta = precio_venta;
+    }
+    
+    
     
 
 
