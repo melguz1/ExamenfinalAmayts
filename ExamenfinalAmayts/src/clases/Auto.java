@@ -15,13 +15,19 @@ public class Auto extends Vehiculo{
         this.precio_compra = precio_compra;
         this.precio_venta = precio_venta;
     }
-    
+
     public Auto() {
     }
 
-    public Auto(int placa, String marca, String modelo) {
+    public Auto(int año, double precio_compra, double precio_venta, int placa, String marca, String modelo) {
         super(placa, marca, modelo);
+        this.año = año;
+        this.precio_compra = precio_compra;
+        this.precio_venta = precio_venta;
     }
+
+
+ 
 
     public int getAño() {
         return año;
