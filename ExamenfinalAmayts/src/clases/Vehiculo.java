@@ -10,25 +10,25 @@ package clases;
  * @author Melvin
  */
 public class Vehiculo {
-   
-    private int placa;
+    
+    private String placa;
     private String marca;
     private String modelo;
 
     public Vehiculo() {
     }
 
-    public Vehiculo(int placa, String marca, String modelo) {
+    public Vehiculo(String placa, String marca, String modelo) {
         this.placa = placa;
         this.marca = marca;
         this.modelo = modelo;
     }
 
-    public int getPlaca() {
+    public String getPlaca() {
         return placa;
     }
 
-    public void setPlaca(int placa) {
+    public void setPlaca(String placa) {
         this.placa = placa;
     }
 
@@ -47,5 +47,5 @@ public class Vehiculo {
     public void setModelo(String modelo) {
         this.modelo = modelo;
     }
-  
+
 }

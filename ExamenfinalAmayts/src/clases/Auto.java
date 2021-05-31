@@ -6,29 +6,30 @@
 package clases;
 
 public class Auto extends Vehiculo{
+   
+    
     private int año;
     private double precio_compra;
     private double precio_venta;
+
+    public Auto() {
+    }
 
     public Auto(int año, double precio_compra, double precio_venta) {
         this.año = año;
         this.precio_compra = precio_compra;
         this.precio_venta = precio_venta;
     }
-
-    public Auto() {
-    }
-
-    public Auto(int año, double precio_compra, double precio_venta, int placa, String marca, String modelo) {
+    public Auto(int año, double precio_compra, double precio_venta, String placa, String marca, String modelo) {
         super(placa, marca, modelo);
         this.año = año;
         this.precio_compra = precio_compra;
         this.precio_venta = precio_venta;
-    }
+    } 
 
-
- 
-
+    
+    
+    
     public int getAño() {
         return año;
     }
@@ -52,10 +53,10 @@ public class Auto extends Vehiculo{
     public void setPrecio_venta(double precio_venta) {
         this.precio_venta = precio_venta;
     }
-    
-    
-    
 
-
+    
+    
+    
+    
     
 }
