@@ -5,6 +5,8 @@
  */
 package vistas;
 
+import clases.Auto;
+
 /**
  *
  * @author Melvin
@@ -38,7 +40,7 @@ public class V_Auto extends javax.swing.JFrame {
         txtModelo = new javax.swing.JTextField();
         txtAño = new javax.swing.JTextField();
         txtPreci_compra = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        btnMostrar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -66,9 +68,14 @@ public class V_Auto extends javax.swing.JFrame {
         jLabel6.setForeground(new java.awt.Color(255, 0, 51));
         jLabel6.setText("PRECIO DE COMPRA");
 
-        jButton1.setBackground(new java.awt.Color(0, 204, 0));
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton1.setText("Mostrar");
+        btnMostrar.setBackground(new java.awt.Color(0, 204, 0));
+        btnMostrar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnMostrar.setText("Mostrar");
+        btnMostrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMostrarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -106,7 +113,7 @@ public class V_Auto extends javax.swing.JFrame {
                                 .addComponent(jLabel1))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(136, 136, 136)
-                        .addComponent(jButton1)))
+                        .addComponent(btnMostrar)))
                 .addContainerGap(42, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -131,12 +138,38 @@ public class V_Auto extends javax.swing.JFrame {
                     .addComponent(jLabel6)
                     .addComponent(txtPreci_compra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(btnMostrar)
                 .addGap(37, 37, 37))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+ 
+    private void btnMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarActionPerformed
+    
+      Auto C= new Auto();
+      
+     C.setPlaca(this.txtPlaca.getText());
+     C.setModelo(this.txtModelo.getText());
+     C.setMarca(this.txtMarca.getText());
+     C.setAño(Integer.parseInt(this.txtAño.getText()));
+     C.setPrecio_compra(Double.parseDouble(this.txtPreci_compra.getText()));
+  
+     double precio_venta=0;
+     double iva=0;
+     double ganancia=0;
+     
+     
+     precio_venta= C.getPrecio_compra()*0.30 + C.getPrecio_compra();
+     
+     iva = precio_venta * 0.13;
+     
+     ganancia= precio_venta - C.getPrecio_compra();
+        
+     
+     
+    }//GEN-LAST:event_btnMostrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -174,7 +207,7 @@ public class V_Auto extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnMostrar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
