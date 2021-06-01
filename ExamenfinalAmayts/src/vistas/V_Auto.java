@@ -6,6 +6,7 @@
 package vistas;
 
 import clases.Auto;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -166,6 +167,18 @@ public class V_Auto extends javax.swing.JFrame {
      iva = precio_venta * 0.13;
      
      ganancia= precio_venta - C.getPrecio_compra();
+     
+     
+     String informacion= "Placa: "+ C.getPlaca() +
+             "\n Modelo: "+ C.getModelo()+
+             "\n Marca: "+ C.getMarca()+
+             "\n Año" + C.getAño()+
+             "\n Precio de Venta: "+ precio_venta+
+             "\n IVA: " + iva+
+             "\nGanancia: "+ ganancia;
+     
+        JOptionPane.showMessageDialog(this, informacion);
+     
         
      
      
